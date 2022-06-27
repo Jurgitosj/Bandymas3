@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,9 +11,9 @@ public class BaseTest {
 
  @BeforeAll
     static void setup() {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\37068\\tools\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("http://localhost:8080/login");
+     WebDriverManager.chromedriver().setup();
+     WebDriver driver = new ChromeDriver();
+     driver.get("http://localhost:8080/login");
 
 
     }

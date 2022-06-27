@@ -3,15 +3,15 @@ import org.junit.jupiter.api.Test;
 public class NextTest extends BaseTest {
     FindingElements Find = new FindingElements(driver);
 
-    CreateAcountPage CreateTheAcount = new CreateAcountPage(driver);
+    CreateAccountPage createTheAccount = new CreateAccountPage(driver);
 
     @Test
-    void CreateTheAcount() {
-        Find.FillAcountForm();
-        CreateTheAcount.UserName("Jurgita");
-        CreateTheAcount.Password("1@1");
-        CreateTheAcount.ComfirmPassword("1@1");
-        CreateTheAcount.Submit();
+    void createAccount() {
+        Find.fillAccountForm();
+        createTheAccount.userNameMethod("Jurgita");
+        createTheAccount.passwordMethod("1@1");
+        createTheAccount.confirmPasswordMethod("1@1");
+        createTheAccount.toRegisterMethod();
 
     }
 }

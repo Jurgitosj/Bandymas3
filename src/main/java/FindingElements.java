@@ -7,19 +7,22 @@ public class FindingElements extends BasePage {
         super(driver);}
 
     @FindBy(xpath =" /html/body/div/form/div/button")
-    public WebElement Login;
+    public WebElement login;
 
     @FindBy(xpath = "/html/body/div/form/div/h4/a")
-    public WebElement CreateAcount;
+    public WebElement createAccountButton;
 
     @FindBy(xpath = "//*[@id=\"userForm\"]/button")
-    public WebElement Registration;
+    public WebElement submitRegistrationButton;
 
-    public void FillAcountForm() {CreateAcount.click();}
+    void fillAccountForm() {
+        createAccountButton.click();}
 
-    public void ToRegister() {Registration.click();}
+//    void toRegister() {
+//        submitRegistrationButton.click();}
 
-    public void ToJoin() {Login.click();}
+    void toJoin() {
+        login.click();}
 
 
 
