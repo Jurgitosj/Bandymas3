@@ -12,8 +12,9 @@ public class BaseTest {
  @BeforeAll
     static void setup() {
      WebDriverManager.chromedriver().setup();
-     WebDriver driver = new ChromeDriver();
+     driver = new ChromeDriver();
      driver.get("http://localhost:8080/login");
+
 
 
     }
